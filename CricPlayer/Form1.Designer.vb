@@ -37,6 +37,8 @@ Partial Class Form1
         Me.btndlt = New System.Windows.Forms.Button()
         Me.btndsp = New System.Windows.Forms.Button()
         Me.btnup = New System.Windows.Forms.Button()
+        Me.cntName = New System.Windows.Forms.ComboBox()
+        Me.Label6 = New System.Windows.Forms.Label()
         CType(Me.GridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -64,7 +66,7 @@ Partial Class Form1
         '
         'btnins
         '
-        Me.btnins.Location = New System.Drawing.Point(465, 86)
+        Me.btnins.Location = New System.Drawing.Point(465, 68)
         Me.btnins.Name = "btnins"
         Me.btnins.Size = New System.Drawing.Size(125, 23)
         Me.btnins.TabIndex = 2
@@ -154,7 +156,7 @@ Partial Class Form1
         '
         'btndlt
         '
-        Me.btndlt.Location = New System.Drawing.Point(465, 134)
+        Me.btndlt.Location = New System.Drawing.Point(465, 116)
         Me.btndlt.Name = "btndlt"
         Me.btndlt.Size = New System.Drawing.Size(125, 23)
         Me.btndlt.TabIndex = 4
@@ -163,27 +165,47 @@ Partial Class Form1
         '
         'btndsp
         '
-        Me.btndsp.Location = New System.Drawing.Point(621, 134)
+        Me.btndsp.Location = New System.Drawing.Point(621, 116)
         Me.btndsp.Name = "btndsp"
         Me.btndsp.Size = New System.Drawing.Size(125, 23)
         Me.btndsp.TabIndex = 6
-        Me.btndsp.Text = "Show "
+        Me.btndsp.Text = "Show all"
         Me.btndsp.UseVisualStyleBackColor = True
         '
         'btnup
         '
-        Me.btnup.Location = New System.Drawing.Point(621, 86)
+        Me.btnup.Location = New System.Drawing.Point(621, 68)
         Me.btnup.Name = "btnup"
         Me.btnup.Size = New System.Drawing.Size(125, 23)
         Me.btnup.TabIndex = 5
         Me.btnup.Text = "Update"
         Me.btnup.UseVisualStyleBackColor = True
         '
+        'cntName
+        '
+        Me.cntName.FormattingEnabled = True
+        Me.cntName.Location = New System.Drawing.Point(566, 163)
+        Me.cntName.Name = "cntName"
+        Me.cntName.Size = New System.Drawing.Size(180, 23)
+        Me.cntName.TabIndex = 7
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label6.Location = New System.Drawing.Point(465, 163)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(95, 19)
+        Me.Label6.TabIndex = 8
+        Me.Label6.Text = "Select country"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.cntName)
         Me.Controls.Add(Me.btndsp)
         Me.Controls.Add(Me.btnup)
         Me.Controls.Add(Me.btndlt)
@@ -216,4 +238,6 @@ Partial Class Form1
     Friend WithEvents btndlt As Button
     Friend WithEvents btndsp As Button
     Friend WithEvents btnup As Button
+    Friend WithEvents cntName As ComboBox
+    Friend WithEvents Label6 As Label
 End Class
