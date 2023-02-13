@@ -214,7 +214,7 @@ Partial Class Form1
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.GridView)
         Me.Name = "Form1"
-        Me.Text = "Form1"
+        Me.Text = "Cricket players"
         CType(Me.GridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
