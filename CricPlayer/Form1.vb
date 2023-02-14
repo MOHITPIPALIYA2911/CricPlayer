@@ -1,4 +1,6 @@
 ﻿Imports System.Data.OleDb
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement.Tab
+
 Public Class Form1
     Sub countryName()
         Dim conn As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\HPX\OneDrive\Desktop\VB_Journal\CricPlayer\CricPlayerDB.accdb")
@@ -81,6 +83,26 @@ Public Class Form1
         Dim ds As New DataSet()
         adp.Fill(ds, "players")
         GridView.DataSource = ds.Tables("players")
+        conn.Close()
+    End Sub
+
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles txtsrc.TextChanged
+
+    End Sub
+
+    Private Sub src_Click(sender As Object, e As EventArgs) Handles src.Click
+        Dim conn As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\HPX\OneDrive\Desktop\VB_Journal\CricPlayer\CricPlayerDB.accdb")
+        conn.Open()
+        Dim sql As String = " select * from players where name='" & txtsrc.Text & "' "
+        Using cmd As New OleDbCommand(sql, conn)
+            Dim reader As OleDbDataReader = cmd.ExecuteReader()
+            While reader.Read()
+                txtname.Text = reader("name").ToString()
+                txtcntr.Text = reader("country").ToString()
+                txtnom.Text = reader("no_of_matches").ToString()
+                txtnor.Text = reader("no_of_runs").ToString()
+            End While
+        End Using
         conn.Close()
     End Sub
 End Class

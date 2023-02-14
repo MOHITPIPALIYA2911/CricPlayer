@@ -26,6 +26,8 @@ Partial Class Form1
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnins = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.txtsrc = New System.Windows.Forms.TextBox()
+        Me.src = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txtnor = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -58,7 +60,7 @@ Partial Class Form1
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label1.ForeColor = System.Drawing.Color.DimGray
-        Me.Label1.Location = New System.Drawing.Point(311, 9)
+        Me.Label1.Location = New System.Drawing.Point(311, 4)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(189, 37)
         Me.Label1.TabIndex = 1
@@ -75,6 +77,8 @@ Partial Class Form1
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.txtsrc)
+        Me.GroupBox1.Controls.Add(Me.src)
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.txtnor)
         Me.GroupBox1.Controls.Add(Me.Label4)
@@ -83,12 +87,28 @@ Partial Class Form1
         Me.GroupBox1.Controls.Add(Me.txtcntr)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.txtname)
-        Me.GroupBox1.Location = New System.Drawing.Point(38, 48)
+        Me.GroupBox1.Location = New System.Drawing.Point(38, 34)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(385, 148)
+        Me.GroupBox1.Size = New System.Drawing.Size(385, 174)
         Me.GroupBox1.TabIndex = 3
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Add player"
+        '
+        'txtsrc
+        '
+        Me.txtsrc.Location = New System.Drawing.Point(29, 141)
+        Me.txtsrc.Name = "txtsrc"
+        Me.txtsrc.Size = New System.Drawing.Size(238, 23)
+        Me.txtsrc.TabIndex = 9
+        '
+        'src
+        '
+        Me.src.Location = New System.Drawing.Point(273, 141)
+        Me.src.Name = "src"
+        Me.src.Size = New System.Drawing.Size(75, 23)
+        Me.src.TabIndex = 8
+        Me.src.Text = "Search"
+        Me.src.UseVisualStyleBackColor = True
         '
         'Label5
         '
@@ -240,4 +260,6 @@ Partial Class Form1
     Friend WithEvents btnup As Button
     Friend WithEvents cntName As ComboBox
     Friend WithEvents Label6 As Label
+    Friend WithEvents txtsrc As TextBox
+    Friend WithEvents src As Button
 End Class
